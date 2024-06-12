@@ -29,6 +29,9 @@ override.tf.json
 # Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
 # example: *tfplan*
 
+# secret files
+*.pem
+
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
