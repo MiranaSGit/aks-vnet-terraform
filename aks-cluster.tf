@@ -31,7 +31,7 @@ resource "azurerm_kubernetes_cluster" "aks_cluster" {
   kubernetes_version  = data.azurerm_kubernetes_service_versions.current.latest_version
   node_resource_group = "${var.cluster_name}-nrg"
   # sku_tier            = "Standard"  Possible values are Free, Standard (which includes the Uptime SLA) and Premium. Defaults to Free
-  # automatic_channel_upgrade = patch (recommended) Possible values are patch, rapid, node-image and stable. Omitting this field sets this value to none
+  automatic_channel_upgrade = patch # patch is (recommended) Possible values are patch, rapid, node-image and stable. Omitting this field sets this value to none
 
   default_node_pool {
     name                         = "systempool"
